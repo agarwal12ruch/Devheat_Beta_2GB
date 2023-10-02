@@ -2,13 +2,13 @@ import mongoose from "mongoose";
 
 mongoose.connect("mongodb://localhost:27017/DEVHEAT_BETA_2GB")
 .then(()=>{
-    console.log("mogodn connected");
+    console.log('mongoose connected');
 })
-.catch(()=>{
-    console.log("failed connection");
-});
+.catch((e)=>{
+    console.log('failed');
+})
 
-const loginschema= new mongoose.Schema({
+const logInSchema=new mongoose.Schema({
     Username:{
         type:String,
         required:true
@@ -19,6 +19,6 @@ const loginschema= new mongoose.Schema({
     }
 })
 
-const collection=new mongoose.model("collection1",loginschema);
- 
-module.exports=collection;
+const collection=new mongoose.model('Collection1',logInSchema)
+
+module.exports=collection

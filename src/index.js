@@ -1,19 +1,22 @@
-const express = require("express")
-const path = require("path")
+import express from "express"
+import hbs from "hbs"
+import path from "path"
 const app = express()
 // const hbs = require("hbs")
-const LogInCollection = require("./mongo")
+import collection from "mongodb"
+
 const port = process.env.PORT || 3000
+
+
 app.use(express.json())
 
 app.use(express.urlencoded({ extended: false }))
 
-const tempelatePath = path.join(__dirname, '../tempelates')
 const publicPath = path.join(__dirname, '../public')
 console.log(publicPath);
 
 app.set('view engine', 'hbs')
-app.set('views', tempelatePath)
+
 app.use(express.static(publicPath))
 
 
@@ -27,19 +30,8 @@ app.get('/', (req, res) => {
     res.render('login')
 })
 
-
-
-// app.get('/home', (req, res) => {
-//     res.render('home')
-// })
-
 app.post('/signup', async (req, res) => {
     
-    // const data = new LogInCollection({
-    //     name: req.body.name,
-    //     password: req.body.password
-    // })
-    // await data.save()
 
     const data = {
         name: req.body.Username,
