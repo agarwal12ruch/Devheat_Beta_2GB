@@ -7,30 +7,30 @@ import collection from "mongodb"
 const port = process.env.PORT || 3000
 
 
-app.use(express.json())
+app.use(express.json());
 
-app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: false }));
 
 
 
-app.set('view engine', 'hbs')
+app.set('view engine', 'hbs');
 
 
 
 
 app.get('/signup', (req, res) => {
-    res.render('signup')
+    res.render('signup');
 })
 app.get('/', (req, res) => {
-    res.render('login')
+    res.render('login');
 })
 
 app.post('/signup', async (req, res) => {
     
 
     const data = {
-        name: req.body.Username,
-        password: req.body.Password
+        Userame: req.body.Username,
+        Password: req.body.Password
     }
 
     const checking = await collection.findOne({ Userame: req.body.Username })
