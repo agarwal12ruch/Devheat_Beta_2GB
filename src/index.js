@@ -2,8 +2,7 @@ import express from "express"
 import hbs from "hbs"
 import path from "path"
 const app = express()
-// const hbs = require("hbs")
-import collection from "mongodb"
+import collection from "mongodb"    
 
 const port = process.env.PORT || 3000
 
@@ -12,15 +11,11 @@ app.use(express.json())
 
 app.use(express.urlencoded({ extended: false }))
 
-const publicPath = path.join(__dirname, '../public')
-console.log(publicPath);
+
 
 app.set('view engine', 'hbs')
 
-app.use(express.static(publicPath))
 
-
-// hbs.registerPartials(partialPath)
 
 
 app.get('/signup', (req, res) => {
@@ -38,14 +33,14 @@ app.post('/signup', async (req, res) => {
         password: req.body.Password
     }
 
-    const checking = await LogInCollection.findOne({ name: req.body.name })
+    const checking = await collection.findOne({ Userame: req.body.Username })
 
    try{
-    if (checking.name === req.body.name && checking.password===req.body.password) {
+    if (checking.Username === req.body.Username && checking.Password===req.body.Password) {
         res.send("user details already exists")
     }
     else{
-        await LogInCollection.insertMany([data])
+        await collection.insertMany([data])
     }
    }
    catch{
@@ -53,7 +48,7 @@ app.post('/signup', async (req, res) => {
    }
 
     res.status(201).render("home", {
-        naming: req.body.name
+        naming: req.body.Username
     })
 })
 
@@ -61,10 +56,10 @@ app.post('/signup', async (req, res) => {
 app.post('/login', async (req, res) => {
 
     try {
-        const check = await LogInCollection.findOne({ name: req.body.name })
+        const check = await collection.findOne({ Username: req.body.Username })
 
-        if (check.password === req.body.password) {
-            res.status(201).render("home", { naming: `${req.body.password}+${req.body.name}` })
+        if (check.Password === req.body.Password) {
+            res.status(201).render("home", { naming: `${req.body.Password}+${req.body.Username}` })
         }
 
         else {
@@ -77,8 +72,7 @@ app.post('/login', async (req, res) => {
     catch (e) {
 
         res.send("wrong details")
-        
-
+    
     }
 
 
