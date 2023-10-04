@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,5 +12,86 @@
     <h1>Home</h1>
     <h2>hello {{naming}}</h2>
     
+</body>
+</html> --}}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Question/Answer</title>
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="bar">
+            <img src="/Devheat_Beta_2GB/Images/Logo.jpg" alt="Logo" class="image">
+            <!-- <h1 class="head">Question/Amswer</h1> -->
+            <div class="hyper">
+                <a href ="/Devheat_Beta_2GB/index/home.html" class="links">Home</a>
+                <a href="" class="links">Contact us</a>
+             </div>
+        </div>
+    </div>
+    <div class="head">
+        <header>
+            <p>Question/Answer</p>
+        </header>
+    </div>
+    <main>
+        <div class="qnabox">
+            <!-- <section id="question-form"> -->
+                <h2>Ask a Question:</h2>
+                <form id="ask-form">
+                    <textarea id="question" placeholder="Ask your question"></textarea>
+                    <button type="submit" class="submit">Submit</button>
+                </form>
+            <!-- </section> -->
+        </div>
+        
+        <section id="question-list">
+            <h2>Questions:</h2>
+            <ul id="questions"></ul>
+        </section>
+    </main>
+    <div class="gap"></div>
+    <div class="footer1">
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">our services</a></li>
+                            <li><a href="#">privacy policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>get help</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">SOURCE</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col" id="img2">
+                        <img src="/Devheat_Beta_2GB/Images/footer image.jpg">
+                    </div>
+                </div>
+            </div>
+       </footer>
+    <script src="../js/Index.js"></script>
 </body>
 </html>
