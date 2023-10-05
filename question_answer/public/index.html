@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -248,6 +248,8 @@ h1 {
         
             main.appendChild(questionSection);
         
+
+        
             // Event listener for delete button
             deleteButton.addEventListener('click', () => {
                 main.removeChild(questionSection);
@@ -374,4 +376,19 @@ h1 {
         }
         </script>
 </body>
-</html>
+</html> 
+
+ 
+ 
+
+ <!-- fetch('/api/questions', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ question }),
+})
+.then((response) => response.json())
+.then((data) => {
+    // Handle the response from the server
+    console.log(data); -->
