@@ -42,4 +42,4 @@ Quest hut is not only a place to ask, but to guide also.It  also allows you to a
 <h1> MENTORED BY 👨‍🏫</h1>
 <p>Vivek Kumar Sir</p>
 <h1>TUTORIAL VIDEO LINK:</h1>
-<p> Frontend link-https://drive.google.com/drive/folders/1pqFxHmLjNKLqStDNmcb4lxomTTvD-0zy?usp=sharing</p>
+<p> https://drive.google.com/drive/folders/1pqFxHmLjNKLqStDNmcb4lxomTTvD-0zy?usp=sharing</p>
